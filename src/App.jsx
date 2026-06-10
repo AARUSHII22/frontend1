@@ -115,7 +115,7 @@ function Hero() {
   const headlineLines = [
     <>The <Underline>thinkers</Underline> and</>,
     <>doers were <Highlight tone="pink">changing</Highlight></>,
-    <>the <Highlight>status</Highlight> Quo with</>,
+    <>the <Highlight>status</Highlight> <span className="mobile-break">Quo with</span></>,
   ];
 
   return (
