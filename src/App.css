@@ -22,6 +22,7 @@
   --max: 1200px;
   --radius-pill: 999px;
   --display-font: 'Gerbil Sans Serif', 'Gerbil Sans', 'Gerbil', 'Gruppo', system-ui, sans-serif;
+  color-scheme: light;
 }
 
 * {
@@ -30,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--white);
 }
 
 body {
@@ -40,6 +42,10 @@ body {
   font-family: var(--display-font);
   font-weight: 400;
   letter-spacing: 0;
+}
+
+main {
+  background: var(--white);
 }
 
 #root {
@@ -1052,7 +1058,7 @@ p {
   .hero p,
   .about p,
   .newsletter p {
-    font-size: 21px;
+    font-size: 16px;
   }
 
   .hero-orbit {
@@ -1159,7 +1165,7 @@ p {
   }
 
   .section-pad {
-    padding: 66px 0;
+    padding: 58px 0;
   }
 
   .logo {
@@ -1172,18 +1178,20 @@ p {
   }
 
   .hero {
-    min-height: 620px;
-    padding-top: 56px;
+    min-height: 560px;
+    padding-top: 46px;
   }
 
   .hero h1 {
-    font-size: 31px;
-    line-height: 1.15;
+    font-size: clamp(30px, 10vw, 40px);
+    line-height: 1.08;
   }
 
   .hero p {
     margin-top: 22px;
+    max-width: 330px;
     font-size: 13px;
+    line-height: 1.45;
   }
 
   .hero-orbit {
@@ -1272,14 +1280,19 @@ p {
   .about h2,
   .services h2,
   .testimonial-wrap h2 {
-    font-size: 38px;
+    font-size: 34px;
     overflow-wrap: break-word;
   }
 
   .about p,
   .newsletter p {
-    font-size: 20px;
+    font-size: 14px;
+    line-height: 1.55;
     overflow-wrap: break-word;
+  }
+
+  .about-heading-line {
+    white-space: normal;
   }
 
   .circle-image-md,
@@ -1314,12 +1327,14 @@ p {
   }
 
   .about {
-    padding-top: 74px;
-    padding-bottom: 90px;
+    padding-top: 58px;
+    padding-bottom: 72px;
   }
 
   .about h2 {
-    font-size: 34px;
+    max-width: 340px;
+    font-size: clamp(30px, 9.5vw, 36px);
+    line-height: 1.02;
   }
 
   .about-image-wash::before,
@@ -1351,7 +1366,8 @@ p {
   .services h2 {
     max-width: 300px;
     margin-bottom: 34px;
-    font-size: 40px;
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 0.9;
   }
 
   .services-curve {
@@ -1365,7 +1381,7 @@ p {
   }
 
   .service-title {
-    font-size: 24px;
+    font-size: clamp(22px, 7.2vw, 28px);
     line-height: 1.02;
     white-space: normal;
   }
@@ -1387,8 +1403,29 @@ p {
   }
 
   .testimonial-card {
+    width: min(100%, 330px);
     margin-top: 42px;
+    padding: 32px 28px;
     border-radius: 24px;
+  }
+
+  .testimonial-card p {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .quote-mark {
+    font-size: 54px;
+  }
+
+  .quote-mark-open {
+    left: 16px;
+    top: 12px;
+  }
+
+  .quote-mark-close {
+    right: 18px;
+    bottom: 2px;
   }
 
   .testimonial-avatar {
@@ -1424,14 +1461,64 @@ p {
     left: 14px;
   }
 
+  .newsletter {
+    padding-top: 82px;
+    padding-bottom: 52px;
+  }
+
+  .newsletter h2 {
+    max-width: 340px;
+    margin-inline: auto;
+    font-size: clamp(46px, 14vw, 58px);
+    line-height: 0.96;
+    -webkit-text-stroke: 0.35px var(--black);
+    text-shadow: 0.35px 0 0 var(--black);
+    overflow-wrap: anywhere;
+  }
+
+  .newsletter p {
+    max-width: 300px;
+    margin-top: 18px;
+    margin-bottom: 22px;
+    font-size: 15px;
+  }
+
+  .primary-button {
+    min-height: 48px;
+    padding: 0 28px;
+    font-size: 18px;
+  }
+
   .newsletter-blob {
-    width: 112px;
-    height: 112px;
-    right: -44px;
+    width: 92px;
+    height: 92px;
+    top: 120px;
+    right: -36px;
   }
 
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .footer-inner {
+    padding-top: 42px;
+  }
+
+  .footer-column {
+    gap: 16px;
+  }
+
+  .footer-column h3 {
+    font-size: 30px;
+  }
+
+  .footer-column a {
+    max-width: 260px;
+    font-size: 18px;
+  }
+
+  .copyright {
+    margin-top: 64px;
   }
 }
